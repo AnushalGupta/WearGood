@@ -1,0 +1,172 @@
+/* Existing styles */
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: var(--header-height);
+	background: transparent;
+	transition: background-color var(--transition-medium), box-shadow var(--transition-medium);
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+}
+
+.navbar-scrolled {
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.navbar-left {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-lg);
+}
+
+.brand-logo {
+	font-size: 1.5rem;
+	font-weight: 800;
+	letter-spacing: -0.5px;
+	color: var(--color-text-primary);
+	text-transform: uppercase;
+}
+
+.desktop-links {
+	display: none;
+	gap: var(--spacing-lg);
+}
+
+.desktop-links a {
+	font-weight: 500;
+	font-size: 0.9rem;
+	color: var(--color-text-primary);
+	transition: color var(--transition-fast);
+}
+
+.desktop-links a:hover {
+	color: var(--color-accent);
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+	gap: var(--spacing-md);
+}
+
+/* Search Styles */
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+.search-input {
+	display: none;
+	/* Hidden on mobile by default, handled by button? OR simplify: show always on desktop */
+	background: #f0f0f0;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 16px;
+	font-family: inherit;
+	font-size: 0.9rem;
+	width: 200px;
+	transition: width var(--transition-fast), background var(--transition-fast);
+}
+
+.search-input:focus {
+	outline: none;
+	background: white;
+	box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+@media (min-width: 768px) {
+	.search-input {
+		display: block;
+	}
+
+	.search-btn-mobile {
+		display: none !important;
+	}
+}
+
+.icon-btn {
+	padding: 8px;
+	color: var(--color-text-primary);
+	transition: transform var(--transition-fast);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon-btn:hover {
+	transform: scale(1.1);
+	color: var(--color-accent);
+}
+
+.cart-btn {
+	position: relative;
+}
+
+.cart-badge {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: var(--color-accent);
+	color: white;
+	font-size: 0.7rem;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+/* Mobile Menu - kept from before */
+.mobile-menu-btn {
+	display: block;
+}
+
+.mobile-menu {
+	position: absolute;
+	top: var(--header-height);
+	left: 0;
+	width: 100%;
+	background: white;
+	padding: var(--spacing-lg);
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-md);
+	transform: translateY(-150%);
+	transition: transform var(--transition-medium);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	z-index: 999;
+}
+
+.mobile-menu.open {
+	transform: translateY(0);
+}
+
+.mobile-menu a {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+@media (min-width: 768px) {
+	.desktop-links {
+		display: flex;
+	}
+
+	.mobile-menu-btn,
+	.mobile-menu {
+		display: none;
+	}
+}

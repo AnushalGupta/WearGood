@@ -1,0 +1,251 @@
+.product-details-page {
+	padding-top: calc(var(--header-height) + var(--spacing-xl));
+	padding-bottom: var(--spacing-2xl);
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--spacing-2xl);
+}
+
+@media (min-width: 1024px) {
+	.product-details-page {
+		grid-template-columns: 1.2fr 1fr;
+	}
+}
+
+/* Gallery */
+.product-gallery {
+	display: flex;
+	gap: var(--spacing-md);
+	flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+	.product-gallery {
+		flex-direction: row;
+		height: 600px;
+	}
+}
+
+.thumbnail-list {
+	display: flex;
+	gap: var(--spacing-sm);
+	overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+	.thumbnail-list {
+		flex-direction: column;
+		width: 80px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+
+.thumbnail {
+	border: 1px solid transparent;
+	width: 80px;
+	height: 100px;
+	flex-shrink: 0;
+	cursor: pointer;
+	transition: border-color var(--transition-fast);
+}
+
+.thumbnail.active {
+	border-color: var(--color-text-primary);
+}
+
+.thumbnail img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.main-image {
+	flex: 1;
+	background: #f0f0f0;
+	height: 500px;
+	/* Mobile height */
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.main-image {
+		height: 100%;
+	}
+}
+
+.main-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	/* Or cover, depending on image style */
+	mix-blend-mode: multiply;
+	/* If images have white bg */
+}
+
+/* Info Section */
+.product-info-section {
+	padding: var(--spacing-md);
+}
+
+.pdp-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-bottom: var(--spacing-xs);
+	line-height: 1.1;
+}
+
+.pdp-category {
+	color: var(--color-text-secondary);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 0.9rem;
+	margin-bottom: var(--spacing-lg);
+}
+
+.pdp-price-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: var(--spacing-lg);
+	border-bottom: 1px solid var(--color-border);
+	padding-bottom: var(--spacing-lg);
+}
+
+.pdp-price {
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.pdp-rating {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	font-weight: 600;
+}
+
+.pdp-description {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	color: var(--color-text-secondary);
+	margin-bottom: var(--spacing-xl);
+}
+
+/* Size Selector */
+.pdp-selector h3 {
+	font-size: 1rem;
+	margin-bottom: var(--spacing-sm);
+}
+
+.size-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-bottom: var(--spacing-xl);
+}
+
+.size-btn {
+	width: 50px;
+	height: 50px;
+	border: 1px solid var(--color-border);
+	background: white;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	transition: all var(--transition-fast);
+}
+
+.size-btn:hover {
+	border-color: var(--color-text-primary);
+}
+
+.size-btn.selected {
+	background: var(--color-text-primary);
+	color: white;
+	border-color: var(--color-text-primary);
+}
+
+/* Actions */
+.pdp-actions {
+	display: flex;
+	gap: var(--spacing-md);
+	margin-bottom: var(--spacing-xl);
+}
+
+.add-to-cart-btn {
+	flex: 1;
+	background: var(--color-text-primary);
+	color: white;
+	padding: 18px;
+	font-size: 1.1rem;
+	font-weight: 600;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-transform: uppercase;
+	transition: opacity var(--transition-fast);
+}
+
+.add-to-cart-btn:hover {
+	opacity: 0.9;
+}
+
+.wishlist-btn {
+	width: 60px;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Pincode */
+.pdp-pincode {
+	background: var(--color-bg-primary);
+	padding: var(--spacing-lg);
+	border-radius: 8px;
+}
+
+.pdp-pincode h3 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 1rem;
+	margin-bottom: var(--spacing-md);
+}
+
+.pincode-form {
+	display: flex;
+	gap: var(--spacing-sm);
+	margin-bottom: var(--spacing-sm);
+}
+
+.pincode-form input {
+	flex: 1;
+	padding: 10px;
+	border: 1px solid var(--color-border);
+	border-radius: 4px;
+}
+
+.pincode-form button {
+	padding: 0 20px;
+	background: white;
+	border: 1px solid var(--color-text-primary);
+	border-radius: 4px;
+	font-weight: 600;
+}
+
+.success-text {
+	color: var(--color-accent);
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+.error-text {
+	color: #ff4444;
+	font-size: 0.9rem;
+}
