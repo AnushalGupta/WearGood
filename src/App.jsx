@@ -8,8 +8,10 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Contact from './pages/Contact';
+import TestAuth from './pages/TestAuth'; // Temporary test
 import { ToastProvider } from './context/ToastContext';
 import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext';
 import './App.css';
 
 // Scroll to top on route change
@@ -38,6 +40,7 @@ function AppContent() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test-auth" element={<TestAuth />} />
         </Routes>
       </main>
       <footer style={{ padding: '4rem 2rem', textAlign: 'center', background: '#333', color: '#fff', marginTop: 'auto' }}>
@@ -56,13 +59,15 @@ function AppContent() {
 
 function App() {
   return (
-    <Router>
-      <ToastProvider>
+    <ToastProvider>
+      <AuthProvider>
         <CartProvider>
-          <AppContent />
+          <Router>
+            <AppContent />
+          </Router>
         </CartProvider>
-      </ToastProvider>
-    </Router>
+      </AuthProvider>
+    </ToastProvider>
   );
 }
 
