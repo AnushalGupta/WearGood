@@ -56,7 +56,7 @@ export default function ProductDetails() {
 				<p className="pdp-category">{product.category}</p>
 
 				<div className="pdp-price-row">
-					<span className="pdp-price">${product.price}</span>
+					<span className="pdp-price">₹{product.price.toLocaleString()}</span>
 					<div className="pdp-rating">
 						<Star size={16} fill="#FFD700" color="#FFD700" />
 						<span>4.8 (120 reviews)</span>

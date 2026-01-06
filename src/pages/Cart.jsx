@@ -41,7 +41,7 @@ export default function Cart() {
 								</div>
 							</div>
 							<div className="cart-item-price-col">
-								<p className="item-price">${(item.price * item.quantity).toFixed(2)}</p>
+								<p className="item-price">₹{(item.price * item.quantity).toLocaleString()}</p>
 								<button className="remove-btn" onClick={() => removeFromCart(item.id, item.selectedSize)}>
 									<Trash2 size={18} />
 								</button>
@@ -54,7 +54,7 @@ export default function Cart() {
 					<h2>Order Summary</h2>
 					<div className="summary-row">
 						<span>Subtotal</span>
-						<span>${cartTotal.toFixed(2)}</span>
+						<span>₹{cartTotal.toLocaleString()}</span>
 					</div>
 					<div className="summary-row">
 						<span>Shipping</span>
@@ -62,7 +62,7 @@ export default function Cart() {
 					</div>
 					<div className="summary-row total">
 						<span>Total</span>
-						<span>${cartTotal.toFixed(2)}</span>
+						<span>₹{cartTotal.toLocaleString()}</span>
 					</div>
 					<button className="checkout-btn">
 						Checkout <ArrowRight size={20} />

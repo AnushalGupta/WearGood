@@ -27,7 +27,7 @@ export default function ProductCard({ product }) {
 			<div className="product-info">
 				<span className="product-category">{product.category}</span>
 				<h3 className="product-name">{product.name}</h3>
-				<p className="product-price">${product.price}</p>
+				<p className="product-price">₹{product.price.toLocaleString()}</p>
 			</div>
 		</div>
 	);

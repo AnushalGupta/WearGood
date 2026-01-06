@@ -31,6 +31,7 @@ export default function Navbar() {
 						<Link to="/category/men">Men</Link>
 						<Link to="/category/women">Women</Link>
 						<Link to="/category/accessories">Accessories</Link>
+						<Link to="/contact">Contact</Link>
 					</div>
 				</div>
 
@@ -58,6 +59,7 @@ export default function Navbar() {
 				<Link to="/category/men" onClick={() => setIsMobileMenuOpen(false)}>Men</Link>
 				<Link to="/category/women" onClick={() => setIsMobileMenuOpen(false)}>Women</Link>
 				<Link to="/category/accessories" onClick={() => setIsMobileMenuOpen(false)}>Accessories</Link>
+				<Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
 				<Link to="/login" onClick={() => setIsMobileMenuOpen(false)}>Login</Link>
 			</div>
 		</nav>

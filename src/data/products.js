@@ -2,7 +2,7 @@ export const PRODUCTS = [
 	{
 		id: 1,
 		name: 'Classic White Tee',
-		price: 29.99,
+		price: 999,
 		category: 'Men',
 		image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -17,7 +17,7 @@ export const PRODUCTS = [
 	{
 		id: 2,
 		name: 'Charcoal Slim Jeans',
-		price: 59.99,
+		price: 2499,
 		category: 'Men',
 		image: 'https://images.unsplash.com/photo-1542272617-08f08630793c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -31,7 +31,7 @@ export const PRODUCTS = [
 	{
 		id: 3,
 		name: 'Forest Green Bomber',
-		price: 89.99,
+		price: 3999,
 		category: 'Men',
 		image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -44,7 +44,7 @@ export const PRODUCTS = [
 	{
 		id: 4,
 		name: 'Summer Flora Dress',
-		price: 49.99,
+		price: 1999,
 		category: 'Women',
 		image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -58,7 +58,7 @@ export const PRODUCTS = [
 	{
 		id: 5,
 		name: 'Urban Hoodie',
-		price: 64.99,
+		price: 2999,
 		category: 'Women',
 		image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -71,7 +71,7 @@ export const PRODUCTS = [
 	{
 		id: 6,
 		name: 'Leather Weekend Bag',
-		price: 129.99,
+		price: 5999,
 		category: 'Accessories',
 		image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -85,7 +85,7 @@ export const PRODUCTS = [
 	{
 		id: 7,
 		name: 'Minimalist Watch',
-		price: 199.99,
+		price: 8999,
 		category: 'Accessories',
 		image: 'https://images.unsplash.com/photo-1524592094714-0f0654e20314?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
@@ -98,7 +98,7 @@ export const PRODUCTS = [
 	{
 		id: 8,
 		name: 'Canvas Sneakers',
-		price: 45.99,
+		price: 1499,
 		category: 'Men',
 		image: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
 		images: [
