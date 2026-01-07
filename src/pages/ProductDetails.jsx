@@ -5,6 +5,8 @@ import { useCart } from '../context/CartContext';
 import { useToast } from '../context/ToastContext';
 import { PRODUCTS } from '../data/products';
 import './ProductDetails.css';
+import ReviewsSection from '../components/ReviewsSection';
+import SimilarProducts from '../components/SimilarProducts';
 
 export default function ProductDetails() {
 	const { productId } = useParams();
@@ -14,6 +16,13 @@ export default function ProductDetails() {
 	const [selectedSize, setSelectedSize] = useState(null);
 	const [pincode, setPincode] = useState('');
 	const [availability, setAvailability] = useState(null);
+
+	const scrollToReviews = () => {
+		const reviewsSection = document.getElementById('reviews-section');
+		if (reviewsSection) {
+			reviewsSection.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
 
 	const { addToCart } = useCart();
 	const { addToast } = useToast();
@@ -57,7 +66,7 @@ export default function ProductDetails() {
 
 				<div className="pdp-price-row">
 					<span className="pdp-price">₹{product.price.toLocaleString()}</span>
-					<div className="pdp-rating">
+					<div className="pdp-rating" onClick={scrollToReviews} style={{ cursor: 'pointer' }}>
 						<Star size={16} fill="#FFD700" color="#FFD700" />
 						<span>4.8 (120 reviews)</span>
 					</div>
@@ -113,6 +122,11 @@ export default function ProductDetails() {
 					{availability === true && <p className="success-text">Delivery available within 3-4 days!</p>}
 					{availability === false && <p className="error-text">Please enter a valid 6-digit pincode.</p>}
 				</div>
+			</div>
+
+			<div className="pdp-extra-sections">
+				<SimilarProducts currentProduct={product} />
+				<ReviewsSection />
 			</div>
 		</div>
 	);
